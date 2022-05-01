@@ -1,0 +1,23 @@
+<div class="navbar">
+    <h1 class="registros-tittle">Registros de Veículos</h1>
+</div>
+
+{{#each posts}}
+    <div class="registros-pai">
+        <div class="registros">
+            <span>Nome: {{nome}}</span>  
+            <span>Marca: {{marca}}</span>
+            <span>Modelo: {{modelo}}</span>
+            <span>Placa: {{placa}}</span>
+            <span>Data: {{data}}</span>
+            <span>Hora: {{hora}}</span>
+            <a href="/deletar/{{id}}"><button class="registros-button">Finalizar</button></a>
+        </div>
+    </div>
+{{/each}}
+
+<div class="add-veiculo">
+    <a href="/cadastro"><button class="button-cad" >+</button></a>
+</div>
+
+

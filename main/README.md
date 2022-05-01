@@ -1,0 +1,1 @@
+Iniciar o script nodemon index.js para iniciar o servidor
