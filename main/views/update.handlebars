@@ -1,0 +1,19 @@
+<form>
+    {{#each posts}}
+        
+    {{/each}}
+
+    <div class="form-area">
+        <h1 class="form-tittle">Editar</h1>
+        <input class="form-input" placeholder="Nome" type="text" name="nome"required/> 
+        <input class="form-input" placeholder="Marca" type="text" name="marca" required/>
+        <input class="form-input" placeholder="Modelo" type="text" name="modelo"required/>
+        <input class="form-input" placeholder="Placa" type="text" name="placa"required/>
+        <input class="form-input" type="date" name="data"required/>
+        <input class="form-input" type="time" name="horaentrada"required/>
+        <br>
+        <a href="/atualizar/{{id}}"><button class="form-button" type="button">Atualizar</button></a>
+        <a href="/home"><button class="form-button" type="button">Voltar</button></a>       
+    </div>
+
+</form>

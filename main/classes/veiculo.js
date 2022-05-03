@@ -21,7 +21,26 @@ class Veiculo {
         .then(function() {
             res.redirect("/home")
         }).catch(function(erro) {
-            alert("Erro, cliente não deletado!")
+            res.send("Not Found")
+        })
+    }
+
+    alterarVeiculo(req, res) {
+        Post.update({
+            nome: req.body.nome,
+            marca: req.body.marca,
+            modelo: req.body.modelo,
+            placa: req.body.placa,
+            data: req.body.data,
+            horaEntrada: req.body.horaentrada
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }).then(function() {
+            res.redirect("/home")
+        }).catch(function() {
+            res.send("Not Found")
         })
     }
 }

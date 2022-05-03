@@ -45,8 +45,24 @@ router.post("/add", (req, res) => {
     veiculo.cadastrarVeiculo(req, res);
 })
 
+//Deletar Veiculos
+
 router.get("/deletar/:id", (req, res) => {
-    veiculo.removerVeiculo(req, res)
+    veiculo.removerVeiculo(req, res);
+})
+
+//Atualizar Veiculos
+
+router.get("/update", (req,res) => {
+    Post.findAll({order: [["id", "DESC"]]}).then(function(posts) {
+        res.render("update", {
+            posts: posts,
+        })
+    }) 
+})
+
+router.get("/atualizar/:id", (req,res) => {
+    veiculo.alterarVeiculo(req,res);
 })
 
 module.exports = router;
