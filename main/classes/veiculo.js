@@ -2,13 +2,13 @@ const Post = require("../models/Post.js");
 
 class Veiculo {
     cadastrarVeiculo(req, res) {
-        const veiculo = Post.create({
+        Post.create({
             nome: req.body.nome,
             marca: req.body.marca,
             modelo: req.body.modelo,
             placa: req.body.placa,
             data: req.body.data,
-            hora: req.body.hora
+            horaEntrada: req.body.horaentrada
         }).then(function() {
             res.redirect("/home")
         }).catch(function() {

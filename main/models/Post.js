@@ -21,7 +21,11 @@ const Post = db.sequelize.define("cadastro", {
         type: db.Sequelize.DATEONLY
     },
 
-    hora: {
+    horaEntrada: {
+        type: db.Sequelize.TIME
+    },
+
+    horaSaida: {
         type: db.Sequelize.TIME
     }
 });
