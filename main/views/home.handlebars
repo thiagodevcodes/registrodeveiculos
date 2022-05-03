@@ -1,24 +1,24 @@
 <div class="navbar">
     <h1 class="registros-tittle">Registros de Veículos</h1>
+    <a href="/"><button class="navbar-button">Sair do sistema</button></a>
 </div>
 
+<div class="registros-pai">
 {{#each posts}}
-    <div class="registros-pai">
-        <div class="registros">
-            <span>Nome: {{nome}}</span>  
-            <span>Marca: {{marca}}</span>
-            <span>Modelo: {{modelo}}</span>
-            <span>Placa: {{placa}}</span>
-            <span>Data: {{data}}</span>
-            <span>Hora: {{hora}}</span>
-            <a href="/admin/deletar/{{id}}"><button class="registros-button">Finalizar</button></a>
-        </div>
+    <div class="registros">
+        <span>Cliente: {{nome}}</span>  
+        <span>Marca: {{marca}}</span>
+        <span>Modelo: {{modelo}}</span>
+        <span>Placa: {{placa}}</span>
+        <span>Data: {{data}}</span>
+        <span>Hora: {{hora}}</span>
+        <a href="/deletar/{{id}}"><button class="registros-button">Finalizar</button></a> 
     </div>
 {{/each}}
+</div>
 
-<br><br><br><br><br><br>
 <div class="add-veiculo">
-    <a href="/admin/cadastro"><button class="button-cad" >+</button></a>
+    <a href="/cadastro"><button class="button-cad" >+</button></a>
 </div>
 
 

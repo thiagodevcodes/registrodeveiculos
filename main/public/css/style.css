@@ -15,8 +15,23 @@ body {
 .navbar {
     display: flex;
     background-color: black;
-    padding: 5px;
     font-family: 'Lobster', cursive;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navbar-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.navbar-button:hover {
+    color: gray;
 }
 
 .button-cad {
@@ -99,28 +114,25 @@ body {
 }
 
 .registros-pai {
-    display: inline-block;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
 }
 
 .registros {
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    gap: 3px;
     background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 15px;
     border-radius: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+    color: white;
+    padding: 20px;
     width: 200px;
-    margin-top: 30px;
 }
 
 .registros-tittle {
-    text-align: center;
-    width: 100%;
     color: white;
 }
 

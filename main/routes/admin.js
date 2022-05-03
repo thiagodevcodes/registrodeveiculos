@@ -1,7 +1,13 @@
 const Post = require("../models/Post.js");
 const router = require("express").Router();
+const Usuario = require("../classes/usuario")
+const Veiculo = require("../classes/veiculo");
+const usuario = new Usuario;
+const veiculo = new Veiculo;
 
-router.get("/", (req, res) => {
+//Tela principal
+
+router.get("/home", (req, res) => {
     Post.findAll({order: [["id", "DESC"]]}).then(function(posts) {
         res.render("home", {
             posts: posts
@@ -9,32 +15,38 @@ router.get("/", (req, res) => {
     }) 
 })
 
+//Acessar Sistema
+
+router.get("/", (req, res) => {
+    res.render("login")
+})
+
+router.post("/login", (req, res) => {
+    usuario.acessarSistema(req, res)
+})
+
+//Cadastro de Usuário
+
+router.get("/user", (req, res) => {
+    res.render("caduser")
+})
+
+router.post("/caduser", (req,res) => {
+    usuario.cadastrarUsuario(req, res)
+})
+
+//Cadastrar Veiculos
+
 router.get("/cadastro", (req, res) => {
     res.render("formulario")
 });
 
 router.post("/add", (req, res) => {
-    Post.create({
-        nome: req.body.nome,
-        marca: req.body.marca,
-        modelo: req.body.modelo,
-        placa: req.body.placa,
-        data: req.body.data,
-        hora: req.body.hora
-    }).then(function() {
-        res.redirect("/admin")
-    }).catch(function() {
-        res.send("Houve um erro");
-    })
+    veiculo.cadastrarVeiculo(req, res);
 })
 
 router.get("/deletar/:id", (req, res) => {
-    Post.destroy({where: {"id": req.params.id}})
-    .then(function() {
-        res.redirect("/admin")
-    }).catch(function(erro) {
-        alert("Erro, cliente não deletado!")
-    })
+    veiculo.removerVeiculo(req, res)
 })
 
 module.exports = router;

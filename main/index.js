@@ -1,10 +1,9 @@
 const express = require("express"); 
 const app = express();
-const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const path = require("path");
 const admin = require("./routes/admin");
-
+const handlebars = require("express-handlebars");
 
 //Config
     //Template Engine
@@ -20,7 +19,7 @@ const admin = require("./routes/admin");
     app.use(express.static(path.join(__dirname, "public")))
 
 //Rotas 
-    app.use("/admin", admin)
+    app.use("/", admin)
 
 
 //Server
