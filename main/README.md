@@ -5,10 +5,3 @@
 <p>Ter o nodemon instalado "npm install -g nodemon";</p>
 <p>Atualizar os dados de conexão com banco de dados em "models/db.js";</p>
 <p>Iniciar o script nodemon index.js na pasta raiz do projeto para iniciar a aplicação;</p>
-
-
-
-
-
-
-
