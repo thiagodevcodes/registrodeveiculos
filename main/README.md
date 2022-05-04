@@ -1,1 +1,3 @@
-Iniciar o script nodemon index.js para iniciar o servidor
+Iniciar o script nodemon index.js para iniciar o servidor;
+
+Ter o MySql instalado;
