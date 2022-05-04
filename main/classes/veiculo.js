@@ -1,6 +1,7 @@
 const Post = require("../models/Post.js");
 const History = require("../models/History.js");
 
+
 class Veiculo {
     cadastrarVeiculo(req, res) {
         Post.create({
@@ -29,11 +30,28 @@ class Veiculo {
     }
 
     removerVeiculo(req, res) {
+        const date = new Date();
         Post.destroy({where: {"id": req.params.id}})
         .then(function() {
-            res.redirect("/home")
+            History.update({horaSaida: date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()}, {
+                where: {
+                    id: req.params.id
+                }
+            }).then(function() {
+                res.redirect("/home")
+            }).catch(function() {
+                res.send("Not Found")
+            })
         }).catch(function(erro) {
             res.send("Not Found")
+        })
+    }
+
+    finalizarVeiculo(req,res) {
+        const id = req.params.id;
+
+        Post.update({
+            
         })
     }
 }
