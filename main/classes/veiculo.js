@@ -4,21 +4,22 @@ const History = require("../models/History.js");
 
 class Veiculo {
     cadastrarVeiculo(req, res) {
+        const date = new Date();
         Post.create({
             nome: req.body.nome,
             marca: req.body.marca,
             modelo: req.body.modelo,
             placa: req.body.placa,
-            data: req.body.data,
-            horaEntrada: req.body.horaentrada
+            data: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
+            horaEntrada: date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
         }).then(function() {
             History.create({
                 nome: req.body.nome,
                 marca: req.body.marca,
                 modelo: req.body.modelo,
                 placa: req.body.placa,
-                data: req.body.data,
-                horaEntrada: req.body.horaentrada
+                data: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
+                horaEntrada: date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
             }).then(function() {
                 res.redirect("/home")
             }).catch(function() {
@@ -44,14 +45,6 @@ class Veiculo {
             })
         }).catch(function(erro) {
             res.send("Not Found")
-        })
-    }
-
-    finalizarVeiculo(req,res) {
-        const id = req.params.id;
-
-        Post.update({
-            
         })
     }
 }
