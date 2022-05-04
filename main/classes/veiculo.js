@@ -1,4 +1,5 @@
 const Post = require("../models/Post.js");
+const History = require("../models/History.js");
 
 class Veiculo {
     cadastrarVeiculo(req, res) {
@@ -10,20 +11,31 @@ class Veiculo {
             data: req.body.data,
             horaEntrada: req.body.horaentrada
         }).then(function() {
-            res.redirect("/home")
+            History.create({
+                nome: req.body.nome,
+                marca: req.body.marca,
+                modelo: req.body.modelo,
+                placa: req.body.placa,
+                data: req.body.data,
+                horaEntrada: req.body.horaentrada
+            }).then(function() {
+                res.redirect("/home")
+            }).catch(function() {
+                res.send("Houve um erro");
+            });
         }).catch(function() {
             res.send("Houve um erro");
-        })
+        });
     }
 
-    async finalizarVeiculo(req, res) {
+    async finalizarVeiculo(req, res, post) {
         const user = await Post.findAll({
             where: {
                 id: req.params.id,
             }
         })
         
-        Post.update({
+        History.update({
             data: req.body.data,
             horaSaida: req.body.horasaida,
         }, 
@@ -31,17 +43,13 @@ class Veiculo {
             id: user[0].id
         }
         }).then(function() {
-            res.redirect("/home")
+            Post.destroy({where: {"id": req.params.id}})
+            .then(function() {
+                res.redirect("/home")
+            }).catch(function(erro) {
+                res.send("Not Found")
+            })
         }).catch(function() {
-            res.send("Not Found")
-        })
-    }
-
-    removerVeiculo(req, res) {
-        Post.destroy({where: {"id": req.params.id}})
-        .then(function() {
-            res.redirect("/home")
-        }).catch(function(erro) {
             res.send("Not Found")
         })
     }
@@ -65,7 +73,22 @@ class Veiculo {
             id: user[0].id
         }
         }).then(function() {
-            res.redirect("/home")
+            History.update({
+                nome: req.body.nome,
+                marca: req.body.marca,
+                modelo: req.body.modelo,
+                placa: req.body.placa,
+                data: req.body.data,
+                horaEntrada: req.body.horaentrada,
+            }, 
+            { where: {
+                id: user[0].id
+            }
+            }).then(function() {
+                res.redirect("/home")
+            }).catch(function() {
+                res.send("Not Found")
+            })
         }).catch(function() {
             res.send("Not Found")
         })

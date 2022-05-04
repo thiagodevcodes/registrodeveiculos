@@ -1,6 +1,6 @@
 const db = require("./db");
 
-const Register = db.sequelize.define("registro", {
+const History = db.sequelize.define("registro", {
     nome: {
         type: db.Sequelize.STRING
     },
@@ -30,6 +30,6 @@ const Register = db.sequelize.define("registro", {
     }
 });
 
-Register.sync({force: true});
+//History.sync({force: true});
 
-module.exports = Register;
+module.exports = History;

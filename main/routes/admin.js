@@ -59,10 +59,6 @@ router.post("/finalizar/:id", (req,res) => {
     veiculo.finalizarVeiculo(req,res);
 })
 
-router.get("/deletar/:id", (req, res) => {
-    veiculo.removerVeiculo(req, res);
-})
-
 //Atualizar Veiculos
 
 router.get("/update", (req,res) => {

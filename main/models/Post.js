@@ -30,6 +30,6 @@ const Post = db.sequelize.define("atendimento", {
     }
 });
 
-Post.sync({force: true});
+//Post.sync({force: true});
 
 module.exports = Post;
