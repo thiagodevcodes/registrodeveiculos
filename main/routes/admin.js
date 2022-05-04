@@ -15,11 +15,6 @@ router.get("/home", (req, res) => {
     }) 
 })
 
-router.get("/remover/:id", (req, res) => {
-    veiculo.removerVeiculo(req, res)
-})
-
-
 //Acessar Sistema
 
 router.get("/", (req, res) => {
@@ -52,5 +47,8 @@ router.post("/add", (req, res) => {
 
 //Saida Veiculos
 
+router.get("/remover/:id", (req, res) => {
+    veiculo.removerVeiculo(req, res)
+})
 
 module.exports = router;
