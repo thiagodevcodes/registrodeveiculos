@@ -6,4 +6,4 @@
 <p>Atualizar os dados de conexão com banco de dados em "models/db.js";</p>
 <p>Iniciar o script nodemon index.js na pasta raiz do projeto para iniciar a aplicação;</p>
 
-<p>Link: <a href="http://localhost:8081" target="_blank"> http://localhost:8081 </a></p>
+<p>Link: <a href="http://localhost:8081" target="__blank"> http://localhost:8081 </a></p>
