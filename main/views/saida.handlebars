@@ -3,15 +3,13 @@
     <a href="/"><button class="navbar-button">Sair do sistema</button></a>
 </div>
 
-{{#each posts}}
-    <form action="/finalizar/{{id}}" method="POST">
-        <div class="form-area">
-            <h1 class="form-tittle">Saida</h1>
-            <input class="form-input" type="date" name="data"required/>
-            <input class="form-input" type="time" name="horasaida"required/>
-            <br>
-            <a href="/finalizar"><button class="form-button" type="submit">Finalizar</button></a>
-            <a href="/home"><button class="form-button" type="button">Voltar</button></a>
-        </div>
-    </form>
-{{/each}} 
+
+<div class="form-area">
+    <h1 class="form-tittle">Saida</h1>
+    <input class="form-input" type="date" name="data"required/>
+    input class="form-input" type="time" name="horasaida"required/>
+    <br>
+    <a href="/finalizar/{{id}}"><button class="form-button" type="submit">Finalizar</button></a>
+    <a href="/home"><button class="form-button" type="button">Voltar</button></a>
+</div>
+

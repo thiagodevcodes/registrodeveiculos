@@ -15,6 +15,11 @@ router.get("/home", (req, res) => {
     }) 
 })
 
+router.get("/remover/:id", (req, res) => {
+    veiculo.removerVeiculo(req, res)
+})
+
+
 //Acessar Sistema
 
 router.get("/", (req, res) => {
@@ -47,32 +52,5 @@ router.post("/add", (req, res) => {
 
 //Saida Veiculos
 
-router.get("/saida", (req,res) => {
-    Post.findAll({order: [["id", "DESC"]]}).then(function(posts) {
-        res.render("saida", {
-            posts: posts,
-        })
-    }) 
-})
-
-router.post("/finalizar/:id", (req,res) => {
-    veiculo.finalizarVeiculo(req,res);
-})
-
-//Atualizar Veiculos
-
-router.get("/update", (req,res) => {
-    Post.findAll({order: [["id", "DESC"]]}).then(function(posts) {
-        res.render("update", {
-            posts: posts,
-        })
-        console.log(req.body.nome)
-    }) 
-
-})
-
-router.post("/atualizar/:id", (req,res) => {
-    veiculo.alterarVeiculo(req,res);
-})
 
 module.exports = router;
