@@ -1,6 +1,6 @@
 const db = require("./db");
 
-const Post = db.sequelize.define("atendimento", {
+const Register = db.sequelize.define("registro", {
     nome: {
         type: db.Sequelize.STRING
     },
@@ -30,6 +30,6 @@ const Post = db.sequelize.define("atendimento", {
     }
 });
 
-Post.sync({force: true});
+Register.sync({force: true});
 
-module.exports = Post;
+module.exports = Register;

@@ -1,5 +1,5 @@
 <div class="navbar">
-    <h1 class="registros-tittle">Registros de Veículos</h1>
+    <h1 class="registros-tittle">Sistema de Registros de Veículos</h1>
     <a href="/"><button class="navbar-button">Sair do sistema</button></a>
 </div>
 
@@ -13,13 +13,13 @@
         <span>Data: {{data}}</span>
         <span>Hora: {{horaEntrada}}</span>
         <a href="/update"><button class="registros-button">Editar</button></a> 
-        <a href="/deletar/{{id}}"><button class="registros-button">Finalizar</button></a> 
+        <a href="/saida"><button class="registros-button">Finalizar</button></a> 
     </div>
 {{/each}}
 </div>
 
 <div class="add-veiculo">
-    <a href="/cadastro"><button class="button-cad" >+</button></a>
+    <a href="/entrada"><button class="button-cad" >+</button></a>
 </div>
 
 

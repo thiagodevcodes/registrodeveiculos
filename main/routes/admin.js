@@ -35,17 +35,29 @@ router.post("/caduser", (req,res) => {
     usuario.cadastrarUsuario(req, res)
 })
 
-//Cadastrar Veiculos
+//Entrada Veiculos
 
-router.get("/cadastro", (req, res) => {
-    res.render("formulario")
+router.get("/entrada", (req, res) => {
+    res.render("entrada")
 });
 
 router.post("/add", (req, res) => {
     veiculo.cadastrarVeiculo(req, res);
 })
 
-//Deletar Veiculos
+//Saida Veiculos
+
+router.get("/saida", (req,res) => {
+    Post.findAll({order: [["id", "DESC"]]}).then(function(posts) {
+        res.render("saida", {
+            posts: posts,
+        })
+    }) 
+})
+
+router.post("/finalizar/:id", (req,res) => {
+    veiculo.finalizarVeiculo(req,res);
+})
 
 router.get("/deletar/:id", (req, res) => {
     veiculo.removerVeiculo(req, res);
@@ -58,10 +70,12 @@ router.get("/update", (req,res) => {
         res.render("update", {
             posts: posts,
         })
+        console.log(req.body.nome)
     }) 
+
 })
 
-router.get("/atualizar/:id", (req,res) => {
+router.post("/atualizar/:id", (req,res) => {
     veiculo.alterarVeiculo(req,res);
 })
 

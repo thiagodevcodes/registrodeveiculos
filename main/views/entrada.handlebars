@@ -1,3 +1,8 @@
+<div class="navbar">
+    <h1 class="registros-tittle">Sistema de Registros de Veículos</h1>
+    <a href="/"><button class="navbar-button">Sair do sistema</button></a>
+</div>
+
 <form action="/add" method="POST">
     <div class="form-area">
         <h1 class="form-tittle">Entrada</h1>
@@ -7,6 +12,7 @@
         <input class="form-input" placeholder="Placa" type="text" name="placa"required/>
         <input class="form-input" type="date" name="data"required/>
         <input class="form-input" type="time" name="horaentrada"required/>
+        <br>
         <button class="form-button" type="submit">Enviar</button>
         <a href="/home"><button class="form-button" type="button">Voltar</button></a>
     </div>
