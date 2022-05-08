@@ -32,7 +32,7 @@ router.get("/user", (req, res) => {
 })
 
 router.post("/caduser", (req,res) => {
-    usuario.cadastrarUsuario(req, res)
+    usuario.cadastrarUsuario(req,res)
 })
 
 //Entrada Veiculos

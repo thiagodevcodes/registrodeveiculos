@@ -1,10 +1,14 @@
 <form action="/login" method="POST">
-    <div class="form-area">
-        <h1 class="form-tittle">Login</h1>
-        <input class="form-input" placeholder="Login" type="text" name="login"required id="login"/> 
-        <input class="form-input" placeholder="Senha" type="password" name="senha" id="senha" required/>
+    <div class="login-area">
+        <div class="login-logo">
+            <img src="/img/estacionamento2.png" alt="" class="login-img">
+            <h1 class="login-tittle">Login</h1>
+        </div>
+
+        <input class="login-input" placeholder="Login" type="text" name="login"required id="login"/> 
+        <input class="login-input" placeholder="Senha" type="password" name="senha" id="senha" required/>
         <br>
-        <button class="form-button" type="submit">Entrar</button>
-        <a href="/user"><button class="form-button" type="button">Cadastrar</button></a>
+        <button class="login-button" type="submit">Entrar</button>
+        <a href="/user"><button class="cad-button" type="button">Cadastre-se aqui</button></a>
     </div>
 </form>

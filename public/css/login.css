@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: dodgerblue;
+}
+
+.login-area {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.login-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-img {
+    width: 50px;
+}
+
+.login-tittle {
+    text-align: center;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+.login-input {
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 250px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    background-color: dodgerblue;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.cad-button {
+    color: white;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cad-button:hover{
+    color: gray;
+}
+
+.login-button:hover{
+    background-color: gray;
+}
+
+
+

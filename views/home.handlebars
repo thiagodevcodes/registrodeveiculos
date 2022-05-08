@@ -1,11 +1,19 @@
-<div class="navbar">
-    <h1 class="registros-tittle">Sistema de Registros de Veículos</h1>
-    <a href="/"><button class="navbar-button">Sair do sistema</button></a>
-</div>
+<nav class="navbar">
+    <div class="logo">
+        <img src="/img/estacionamento2.png" alt="Imagem do estacionamento" class="logo-img">
+        <h1 class="registros-tittle">Estacionamento</h1>
+    </div>
 
-<div class="registros-pai">
+    <ul class="navbar-options">
+        <li><a href="/"><button class="navbar-options-button">Sair do sistema</button></a></li>
+    </ul>
+</nav>
+
+    
+
+<div class="registros-container">
 {{#each posts}}
-    <div class="registros">
+    <div class="registros-chield">
         <span>Cliente: {{nome}}</span>  
         <span>Marca: {{marca}}</span>
         <span>Modelo: {{modelo}}</span>

@@ -1,17 +1,27 @@
-<div class="navbar">
-    <h1 class="registros-tittle">Sistema de Registros de Veículos</h1>
-    <a href="/"><button class="navbar-button">Sair do sistema</button></a>
-</div>
+<nav class="navbar">
+    <div class="logo">
+        <img src="/img/estacionamento2.png" alt="Imagem do estacionamento" class="logo-img">
+        <h1 class="registros-tittle">Estacionamento</h1>
+    </div>
+
+    <ul class="navbar-options">
+        <li><a href="/"><button class="navbar-options-button">Sair do sistema</button></a></li>
+    </ul>
+</nav>
 
 <form action="/add" method="POST">
-    <div class="form-area">
-        <h1 class="form-tittle">Entrada</h1>
-        <input class="form-input" placeholder="Nome" type="text" name="nome"required/> 
-        <input class="form-input" placeholder="Marca" type="text" name="marca" required/>
-        <input class="form-input" placeholder="Modelo" type="text" name="modelo"required/>
-        <input class="form-input" placeholder="Placa" type="text" name="placa"required/>
+    <div class="login-area">
+        <div class="login-logo">
+            <img src="/img/estacionamento2.png" alt="" class="login-img">
+            <h1 class="login-tittle">Entrada</h1>
+        </div>
+        <input class="login-input" placeholder="Nome" type="text" name="nome"required/> 
+        <input class="login-input" placeholder="Marca" type="text" name="marca" required/>
+        <input class="login-input" placeholder="Modelo" type="text" name="modelo"required/>
+        <input class="login-input" placeholder="Placa" type="text" name="placa"required/>
         <br>
-        <button class="form-button" type="submit">Enviar</button>
-        <a href="/home"><button class="form-button" type="button">Voltar</button></a>
+        <button class="login-button" type="submit">Enviar</button>
+
+        <a href="/home"><button class="cad-button" type="button">Voltar</button></a>
     </div>
 </form>

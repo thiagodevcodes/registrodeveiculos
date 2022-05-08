@@ -1,0 +1,98 @@
+.navbar {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+.navbar-options {
+    display: flex;
+}
+
+.navbar-options-button {
+    background-color: black;
+    list-style-type: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-options-button:hover {
+    color: gray;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    margin-right: 5px;
+}
+
+.registros-container {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.registros-chield {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.registros-tittle {
+    color: white;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+.registros-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.registros-button:hover {
+    background-color: gray;
+}
+
+.button-cad {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px 20px 2px 20px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 60px;
+}
+
+.button-cad:hover{
+    background-color: gray;
+}
+
+.add-veiculo {
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
+}

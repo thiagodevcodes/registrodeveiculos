@@ -5,6 +5,7 @@ class Usuario {
         const login = req.body.login
         const senha = req.body.senha
         const confirm = req.body.confirm
+            
 
         const user = await User.findAll({
             where: {
