@@ -17,12 +17,16 @@ const History = db.sequelize.define("registro", {
         type: db.Sequelize.STRING
     },
 
-    data: {
+    dataEntrada: {
         type: db.Sequelize.DATEONLY
     },
 
     horaEntrada: {
         type: db.Sequelize.TIME
+    },
+
+    dataSaida: {
+        type: db.Sequelize.DATEONLY
     },
 
     horaSaida: {

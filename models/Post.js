@@ -17,12 +17,16 @@ const Post = db.sequelize.define("atendimento", {
         type: db.Sequelize.STRING
     },
 
-    data: {
+    dataEntrada: {
         type: db.Sequelize.DATEONLY
     },
 
     horaEntrada: {
         type: db.Sequelize.TIME
+    },
+
+    dataSaida: {
+        type: db.Sequelize.DATEONLY
     },
 
     horaSaida: {

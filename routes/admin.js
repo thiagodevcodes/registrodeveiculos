@@ -1,7 +1,7 @@
 const Post = require("../models/Post.js");
 const router = require("express").Router();
-const Usuario = require("../classes/usuario")
-const Veiculo = require("../classes/veiculo");
+const Usuario = require("../public/classes/usuario")
+const Veiculo = require("../public/classes/veiculo");
 const usuario = new Usuario;
 const veiculo = new Veiculo;
 
@@ -49,6 +49,30 @@ router.post("/add", (req, res) => {
 
 router.get("/remover/:id", (req, res) => {
     veiculo.removerVeiculo(req, res)
+})
+
+//Update Veiculos 
+
+router.get("/update/:id", async(req, res) => {
+    const user = await Post.findAll({
+        where: {
+            id: req.params.id
+        }
+    })
+
+    console.log(user[0]);
+
+    res.render("update", {
+        id: user[0].id,
+        nome: user[0].nome,
+        marca: user[0].marca,
+        modelo: user[0].modelo,
+        placa: user[0].placa
+    })
+})
+
+router.post("/updated/:id", (req, res) => {
+    veiculo.alterarVeiculo(req,res)
 })
 
 module.exports = router;

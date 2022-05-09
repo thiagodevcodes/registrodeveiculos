@@ -1,4 +1,4 @@
-const User = require("../models/User.js");
+const User = require("../../models/User");
 
 class Usuario {
     async cadastrarUsuario(req, res) {
@@ -30,8 +30,8 @@ class Usuario {
     }
 
     async acessarSistema(req, res) {
-        const login = req.body.login;
-        const senha = req.body.senha;
+        const login = req.body.login
+        const senha = req.body.senha
     
         const user = await User.findAll({
             where: {
