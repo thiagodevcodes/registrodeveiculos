@@ -60,8 +60,6 @@ router.get("/update/:id", async(req, res) => {
         }
     })
 
-    console.log(user[0]);
-
     res.render("update", {
         id: user[0].id,
         nome: user[0].nome,
