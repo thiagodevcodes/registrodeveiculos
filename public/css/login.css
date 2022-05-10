@@ -46,10 +46,26 @@ body {
     width: 250px;
     border: none;
     background: none;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    box-shadow: 0 0 0 30px black inset;
+
+}
+
+.caduser-input {
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 250px;
+    border: none;
+    background: none;
     border-bottom: 1px solid white;
     color: white;
     outline: none;
+    -webkit-text-fill-color: rgb(255, 255, 255);
 }
+
 
 .login-button {
     width: 100%;
