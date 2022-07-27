@@ -7,12 +7,10 @@
 .menu-top {
     display: flex;
     background-color: rgb(34, 34, 46);
-    justify-content:flex-start;
-    float: left;
     height: 100vh;
     flex-direction: column;
     width: 300px;
-    position: relative;
+    position: fixed;
 }
 
 .navbar-options {
@@ -54,10 +52,11 @@
     display: flex;
     justify-content: center;
     list-style-type: none;
-    margin-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: rgb(34, 34, 46);
 }
+
 
 .logo-img {
     height: 40px;
@@ -71,7 +70,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-
+    padding-left: 310px;
 }
 
 .registros-chield {
@@ -85,11 +84,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .registros-tittle {
     color: white;
     font-size: 30px;
     font-family: 'Lobster', cursive;
-
 }
 
 .registros-button {
