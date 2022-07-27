@@ -6,7 +6,7 @@
 
 .menu-top {
     display: flex;
-    background-color: rgb(27, 27, 32);
+    background-color: rgb(34, 34, 46);
     justify-content:flex-start;
     float: left;
     height: 100vh;
@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 10px;
-    background-color: rgb(27, 27, 32);
+    background-color: rgb(34, 34, 46);
     list-style-type: none;
     color: rgb(255, 255, 255);
     border: none;
@@ -77,7 +77,7 @@
 .registros-chield {
     display: flex;
     flex-direction: column;
-    background-color: rgb(27, 27, 32);
+    background-color: rgb(34, 34, 46);
     border-radius: 10px;
     color: white;
     padding: 20px;
