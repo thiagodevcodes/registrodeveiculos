@@ -1,18 +1,23 @@
-<nav class="navbar">
+<nav class="menu-top">
     <div class="logo">
-        <img src="/img/estacionamento2.png" alt="Imagem do estacionamento" class="logo-img">
+        <img src="/img/estacionamento.png" alt="Imagem do estacionamento" class="logo-img">
         <h1 class="registros-tittle">Estacionamento</h1>
     </div>
 
     <ul class="navbar-options">
-        <li><a href="/"><button class="navbar-options-button">Sair do sistema</button></a></li>
-    </ul>
+        <li><a href="/home"><button class="navbar-options-button"><img class="button-img" src="/img/carros.png" alt="">Mostrar Veiculos</button></a></li>
+        <li>
+            
+            <a href="/entrada"><button class="navbar-options-button"><img class="button-img" src="/img/mais.png" alt=""> Cadastrar Veiculos</button></a>
+        </li>
+        <li><a href="/"><button class="navbar-options-button"><img class="button-img" src="/img/sair.png" alt="">Sair do sistema</button></a></li>
+     </ul>
 </nav>
 
 <form action="/updated/{{id}}" method="POST">
-    <div class="login-area">
+    <div class="cad-area">
         <div class="login-logo">
-            <img src="/img/estacionamento2.png" alt="" class="login-img">
+            <img src="/img/estacionamento.png" alt="" class="login-img">
             <h1 class="login-tittle">Editar</h1>
         </div>
     
@@ -21,8 +26,7 @@
         <input class="login-input" placeholder="Modelo" type="text" name="modelo" value="{{modelo}}" required/>
         <input class="login-input" placeholder="Placa" type="text" name="placa" value="{{placa}}" required/>
         <br>
-        <button class="login-button" type="submit">Enviar</button>
-        <a href="/home"><button class="cad-button" type="button">Voltar</button></a>
+        <button class="login-button" type="submit">Alterar</button>
     </div>
 </form>
 

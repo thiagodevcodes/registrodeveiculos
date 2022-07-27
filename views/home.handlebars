@@ -1,16 +1,18 @@
-<nav class="navbar">
+<nav class="menu-top">
     <div class="logo">
-        <img src="/img/estacionamento2.png" alt="Imagem do estacionamento" class="logo-img">
+        <img src="/img/estacionamento.png" alt="Imagem do estacionamento" class="logo-img">
         <h1 class="registros-tittle">Estacionamento</h1>
     </div>
 
     <ul class="navbar-options">
-        <li><a href="/"><button class="navbar-options-button">Sair do sistema</button></a></li>
-    </ul>
+        <li><a href="/home"><button class="navbar-options-button"><img class="button-img" src="/img/carros.png" alt="">Mostrar Veiculos</button></a></li>
+        <li>
+            
+            <a href="/entrada"><button class="navbar-options-button"><img class="button-img" src="/img/mais.png" alt=""> Cadastrar Veiculos</button></a>
+        </li>
+        <li><a href="/"><button class="navbar-options-button"><img class="button-img" src="/img/sair.png" alt="">Sair do sistema</button></a></li>
+     </ul>
 </nav>
-
-    
-
 <div class="registros-container">
 {{#each posts}}
     <div class="registros-chield">
@@ -25,9 +27,3 @@
     </div>
 {{/each}}
 </div>
-
-<div class="add-veiculo">
-    <a href="/entrada"><button class="button-cad" >+</button></a>
-</div>
-
-
