@@ -58,6 +58,28 @@ body {
     font-family: 'Lobster', cursive;
 }
 
+.input-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    margin-left: 20%;
+    padding-bottom: 20px;
+}
+
+.input-search-img {
+    width: 50px;
+    background-color: white;
+    position: relative;
+    border-radius: 0px 2px;
+}
+
+.input-search input {
+    position: relative;
+    padding: 16.5px;
+    outline: none;
+}
+
 .login-input {
     padding: 5px;
     margin-bottom: 5px;
@@ -69,7 +91,6 @@ body {
     outline: none;
     color: white;
     box-shadow: 0 0 0 30px rgb(34, 34, 46) inset;
-
 }
 
 .caduser-input {
@@ -93,6 +114,7 @@ body {
     border-radius: 7px;
     margin-bottom: 5px;
     cursor: pointer;
+
 }
 
 .cad-button {

@@ -12,16 +12,30 @@
 </nav>
 
 <div class="registros-container">
+
+<table class="">
+    <tr>
+        <th>Cliente</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Placa</th>
+        <th>Data</th>
+        <th>Hora Entrada</th>
+        <th>Data Saida</th>
+        <th>Hora Saida</th>
+    </tr>
 {{#each posts}}
-    <div class="registros-chield">
-        <span>Cliente: {{nome}}</span>  
-        <span>Marca: {{marca}}</span>
-        <span>Modelo: {{modelo}}</span>
-        <span>Placa: {{placa}}</span>
-        <span>Data: {{dataEntrada}}</span>
-        <span>Hora: {{horaEntrada}}</span>
-        <a href="/remover/{{id}}"><button class="registros-button">Finalizar</button></a> 
-        <a href="/update/{{id}}"><button class="registros-button">Editar</button></a> 
-    </div>
+    <tr>
+        <td>{{nome}}</td>
+        <td>{{marca}}</td>
+        <td>{{modelo}}</td>
+        <td>{{placa}}</td>
+        <td>{{dataEntrada}}</td>
+        <td>{{horaEntrada}}</td>
+        <td>{{dataSaida}}</td>
+        <td>{{horaSaida}}</td>
+    </tr>
+
 {{/each}}
+</table>
 </div>

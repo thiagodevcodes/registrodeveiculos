@@ -1,4 +1,5 @@
 const Post = require("../models/Post.js");
+const History = require("../models/History.js")
 const router = require("express").Router();
 const Usuario = require("../public/classes/usuario")
 const Veiculo = require("../public/classes/veiculo");
@@ -14,6 +15,15 @@ router.get("/home", (req, res) => {
         })
     }) 
 })
+
+router.get("/registro", async(req, res) => {
+    History.findAll({order: [["datasaida"], ["horasaida"]]}).then(function(posts) {
+        res.render("registro", {
+            posts: posts
+        })
+    }) 
+})
+
 
 //Acessar Sistema
 
@@ -72,5 +82,8 @@ router.get("/update/:id", async(req, res) => {
 router.post("/updated/:id", (req, res) => {
     veiculo.alterarVeiculo(req,res)
 })
+
+//Registro Geral
+
 
 module.exports = router;
