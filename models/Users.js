@@ -1,6 +1,6 @@
 const db = require("./db");
 
-const User = db.sequelize.define("usuarios", {
+const Users = db.sequelize.define("usuarios", {
     login: {
         type: db.Sequelize.STRING
     },
@@ -10,6 +10,6 @@ const User = db.sequelize.define("usuarios", {
     }
 });
 
-//User.sync({force: true});
+//Users.sync({force: true});
 
-module.exports = User;
+module.exports = Users;

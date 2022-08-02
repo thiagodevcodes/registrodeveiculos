@@ -1,4 +1,4 @@
-const User = require("../../models/User");
+const Users = require("../../models/Users");
 
 class Usuario {
     async cadastrarUsuario(req, res) {
@@ -7,7 +7,7 @@ class Usuario {
         const confirm = req.body.confirm
             
 
-        const user = await User.findAll({
+        const user = await Users.findAll({
             where: {
                 login: login,
             }
@@ -16,7 +16,7 @@ class Usuario {
         console.log(confirm)
     
         if(user.length == 0 && senha == confirm) {
-            User.create({
+            Users.create({
                 login: login,
                 senha: senha,
             }).then(function() {
@@ -33,7 +33,7 @@ class Usuario {
         const login = req.body.login
         const senha = req.body.senha
     
-        const user = await User.findAll({
+        const user = await Users.findAll({
             where: {
                 login: login,
                 senha: senha

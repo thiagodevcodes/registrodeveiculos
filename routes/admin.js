@@ -1,5 +1,4 @@
-const Post = require("../models/Post.js");
-const History = require("../models/History.js")
+const History = require("../models/Vehicles.js")
 const router = require("express").Router();
 const Usuario = require("../public/classes/usuario")
 const Veiculo = require("../public/classes/veiculo");
@@ -9,19 +8,11 @@ const veiculo = new Veiculo;
 //Tela principal
 
 router.get("/home", (req, res) => {
-    Post.findAll({order: [["id", "DESC"]]}).then(function(posts) {
-        res.render("home", {
-            posts: posts
-        })
-    }) 
+    veiculo.mostrarVeiculo(req, res, true)
 })
 
 router.get("/registro", async(req, res) => {
-    History.findAll({order: [["datasaida"], ["horasaida"]]}).then(function(posts) {
-        res.render("registro", {
-            posts: posts
-        })
-    }) 
+    veiculo.mostrarVeiculo(req, res, false)
 })
 
 
@@ -58,13 +49,13 @@ router.post("/add", (req, res) => {
 //Saida Veiculos
 
 router.get("/remover/:id", (req, res) => {
-    veiculo.removerVeiculo(req, res)
+    veiculo.finalizarVeiculo(req, res)
 })
 
 //Update Veiculos 
 
 router.get("/update/:id", async(req, res) => {
-    const user = await Post.findAll({
+    const user = await History.findAll({
         where: {
             id: req.params.id
         }

@@ -1,6 +1,6 @@
 const db = require("./db");
 
-const History = db.sequelize.define("registro", {
+const Vehicles = db.sequelize.define("registro", {
     nome: {
         type: db.Sequelize.STRING
     },
@@ -25,6 +25,10 @@ const History = db.sequelize.define("registro", {
         type: db.Sequelize.TIME
     },
 
+    situacao: {
+        type: db.Sequelize.BOOLEAN
+    },
+
     dataSaida: {
         type: db.Sequelize.DATEONLY
     },
@@ -34,6 +38,6 @@ const History = db.sequelize.define("registro", {
     }
 });
 
-//History.sync({force: true});
+//Vehicles.sync({force: true});
 
-module.exports = History;
+module.exports = Vehicles;
