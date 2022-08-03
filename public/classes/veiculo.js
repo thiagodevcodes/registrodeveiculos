@@ -13,7 +13,7 @@ class Veiculo {
             dataEntrada: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
             horaEntrada: date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
         }).then( () => {
-            res.redirect("/home")
+            res.redirect("/veiculos")
         }).catch( () => {
             res.send("Houve um erro");
         });
@@ -23,7 +23,7 @@ class Veiculo {
         //REMOVE - Veiculo
         Vehicles.destroy({where: {"id": req.params.id}})
         .then(function() {
-            res.redirect("/home")
+            res.redirect("/home/veiculos")
         }).catch( () => {
             res.send("Not Found")
         })
@@ -41,7 +41,7 @@ class Veiculo {
                 id: req.params.id
             }
         }).then( () => {
-            res.redirect("/home")
+            res.redirect("/veiculos")
         }).catch( () => {
             res.send("Not Found")
         })
@@ -59,7 +59,7 @@ class Veiculo {
                 id: req.params.id
             }
         }).then( () => {
-            res.redirect("/home")
+            res.redirect("/veiculos")
         }).catch( () => {
             res.send("Not Found")
         })

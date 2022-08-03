@@ -7,6 +7,10 @@ const Users = db.sequelize.define("usuarios", {
 
     senha: {
         type: db.Sequelize.STRING
+    },
+
+    admin: {
+        type: db.Sequelize.BOOLEAN
     }
 });
 

@@ -93,6 +93,14 @@ body {
     box-shadow: 0 0 0 30px rgb(34, 34, 46) inset;
 }
 
+.caduser-boxinput {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 5px;
+    flex-direction: row-reverse;
+}
+
 .caduser-input {
     padding: 5px;
     margin-bottom: 5px;
@@ -103,6 +111,17 @@ body {
     color: white;
     outline: none;
     -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.caduser-label {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+
+}
+
+.caduser-checkbox {
+    color: white;
 }
 
 

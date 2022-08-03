@@ -1,5 +1,19 @@
-<form action="/caduser" method="POST">
-    <div class="login-area">
+<nav class="menu-top">
+    <div class="logo">
+        <img src="/img/estacionamento.png" alt="Imagem do estacionamento" class="logo-img">
+        <h1 class="registros-tittle">Estacionamento</h1>
+    </div>
+    <ul class="navbar-options">
+        <li><a href="/veiculos"><button class="navbar-options-button"><img class="button-img" src="/img/carros.png" alt="">Mostrar Veiculos</button></a></li>
+        <li><a href="/veiculos/entrada"><button class="navbar-options-button"><img class="button-img" src="/img/mais.png" alt=""> Cadastrar Veiculos</button></a></li>
+        <li><a href="/veiculos/registros"><button class="navbar-options-button"><img class="button-img" src="/img/registro-online.png" alt="">Registro Geral</button></a></li>
+        <li><a href="/usuario/cadastro"><button class="navbar-options-button" type="button"><img class="button-img" src="/img/caduser.png" alt=""> Cadastrar Usuário</button></a></li>
+        <li><a href="/"><button class="navbar-options-button"><img class="button-img" src="/img/sair.png" alt="">Sair do sistema</button></a></li>
+     </ul>
+</nav>
+
+<form action="/usuario" method="POST">
+    <div class="cad-area">
         <div class="login-logo">
             <img src="/img/estacionamento.png" alt="" class="login-img">
             <h1 class="login-tittle">Cadastro</h1>
@@ -8,8 +22,12 @@
         <input class="caduser-input" placeholder="Login" type="text" name="login"required id="login" autocomplete="off"/> 
         <input class="caduser-input" placeholder="Senha" type="password" name="senha" id="senha" required/>
         <input class="caduser-input" placeholder="Confirmação de Senha" type="password" name="confirm" required/>
-        <br>
+        
+        <div class="caduser-boxinput">
+            <label class="caduser-label" for="admin">Admin</label>
+            <input class="caduser-checkbox" value="true" name="admin" id="admin" type="checkbox">
+        </div>
+
         <button class="login-button" type="submit">Cadastrar</button>
-        <a href="/"><button class="cad-button" type="button">Voltar</button></a>
     </div>
 </form>
